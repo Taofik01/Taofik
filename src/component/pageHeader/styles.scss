@@ -1,0 +1,23 @@
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom:1px dashed var(--theme-main-color) ;
+}
+
+.wrapper_text{
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1rem;
+    text-transform: capitalize;
+    color: var(--theme-main-color);
+    flex-grow: 1;
+}
+
+.wrapper_icon{
+    svg{
+        color: var(--theme-main-color);
+    }
+}

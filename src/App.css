@@ -1,0 +1,10 @@
+.App{
+  height: 100%;
+}
+.app_main_page_content{
+  height: calc(100% - 80px);
+}
+
+
+
+
