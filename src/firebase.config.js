@@ -18,6 +18,7 @@ const firebaseConfig = {
 };
 
 console.log("Firebase Project ID:", firebaseConfig.projectId);
+console.log("Firebase Project ID:", firebaseConfig.apiKey);
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
