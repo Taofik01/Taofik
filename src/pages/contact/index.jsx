@@ -3,7 +3,7 @@ import PageHeaderContent from '../../component/pageHeader'
 import { BsInfoCircleFill } from 'react-icons/bs'
 import { Animate } from 'react-simple-animate'
 import './styles.scss'
-import app from '../../firebase'
+import app from '../../firebase.config'
 import { getDatabase, ref, set, push } from 'firebase/database'
 
 export default function Contact() {
@@ -63,7 +63,7 @@ export default function Contact() {
             </div>
             <div className='descriptionWrapper'>
             <textarea rows={5} required name='description' className='inputDescription' type={'text'} value={description} onChange={(e) => setDescription(e.target.value)} />
-              <label htmlFor='description' className='descriptionLabel'>Name</label>
+              <label htmlFor='description' className='descriptionLabel'>Description</label>
             </div>
             </div>
             <button className='submit_button' onClick={submit}>Submit</button>
