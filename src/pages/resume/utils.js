@@ -57,7 +57,7 @@ export const data = {
         {
             title: "B.Eng",
             subTitle: "University Of Lagos",
-            description: "2023 - prescence",
+            description: "2023 - prescent",
         },
     ],
 };
