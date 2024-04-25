@@ -10,6 +10,7 @@ import Contact from './pages/contact'
 import NavBar from './component/navbar'
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from 'tsparticles'
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
 
