@@ -20,7 +20,12 @@ export default function Contact() {
       email: email,
       description: description
     }).then(() => {
-      alert('Message sent successfully')
+      setName("")
+      setEmail("")
+      setDescription("")
+      alert('Message sent successfully');
+      
+
     }).catch((error) => {
       alert(error)
     })
