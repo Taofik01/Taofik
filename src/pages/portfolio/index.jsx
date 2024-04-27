@@ -126,7 +126,7 @@ export default function Portfolio() {
                   index === hoveredValue && (
                     <div>
                       <p>{item.name}</p>
-                      <Link to={item.link}>
+                      <Link to={item.link} target="_blank">
                       <button className="visit_on">Visit</button></Link>
                     </div>
                   )
