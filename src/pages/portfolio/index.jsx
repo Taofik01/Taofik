@@ -9,6 +9,7 @@ import Image6 from "../../assets/Image6.png";
 import Image7 from "../../assets/Image7.png";
 import Image8 from "../../assets/Image8.png";
 import "./styles.scss";
+import { Link } from "react-router-dom";
 
 import { BsInfoCircleFill } from "react-icons/bs";
 
@@ -17,49 +18,49 @@ const PortfolioData = [
     id: 3,
     name: "Food Recipe",
     Image: Image1,
-    link: "",
+    link: "https://food-recipe-theta-one.vercel.app/",
   },
   {
     id: 3,
     name: "Ecommerce",
     Image: Image2,
-    link: "",
+    link: "https://alshedad.vercel.app/",
   },
   {
     id: 3,
     name: "Thrivefuse",
     Image: Image7,
-    link: "",
+    link: "NIL",
   },
   {
     id: 3,
     name: "Expense Tracker",
     Image: Image3,
-    link: "",
+    link: "https://my-expense-tracking-app.vercel.app/",
   },
   {
     id: 2,
     name: "Car Rental Services",
     Image: Image4,
-    link: "",
+    link: "https://sixth-luxury.vercel.app/",
   },
   {
     id: 2,
     name: "C Documentation",
     Image: Image5,
-    link: "",
+    link: "https://c-documentation-new.vercel.app/",
   },
   {
     id: 2,
     name: "Dr. Borlaug Page",
     Image: Image6,
-    link: "",
+    link: "https://dr-borlaug.vercel.app/",
   },
   {
     id: 2,
     name: "Note App",
     Image: Image8,
-    link: "",
+    link: "https://note-app-ten-puce.vercel.app/",
   },
 ];
 
@@ -125,7 +126,8 @@ export default function Portfolio() {
                   index === hoveredValue && (
                     <div>
                       <p>{item.name}</p>
-                      <button>Visit</button>
+                      <Link to={item.link}>
+                      <button className="visit_on">Visit</button></Link>
                     </div>
                   )
                 }
