@@ -97,6 +97,11 @@
         }
     }
 }
+.visit_on:hover{
+    background-color: var(--theme-main-color);
+    color: #000;
+    opacity: 1;
+}
 
 .portfolio_item:hover .overlay{
     opacity: 0.8;

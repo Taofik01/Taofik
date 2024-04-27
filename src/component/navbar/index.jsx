@@ -38,18 +38,22 @@ function NavBar() {
     setToggleIcon(!toggleIcon);
   };
 
+  const closeMenu = () => {
+    setToggleIcon(false);
+  }
+
   return (
     <div>
       <nav className="navbar">
         <div className="navbar_container">
-          <Link to={"/"} className="navbar_container_logo">
+          <Link to={"/"} className="navbar_container_logo" onClick={closeMenu}>
             <img src={TaofikLogo} className="navbar_image" />
           </Link>
         </div>
         <ul className={`navbar_container_menu ${toggleIcon ? "active" : ""}`}>
           {data.map((item, key) => (
             <li key={key} className="navbar_container_menu_item">
-              <Link className="navbar_container_menu_links" to={item.to}>
+              <Link className="navbar_container_menu_links" to={item.to} onClick={closeMenu}>
                 {item.label}
               </Link>
             </li>
