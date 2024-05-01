@@ -126,6 +126,7 @@ if (init) {
         <Route path='#' element={<Home />} /> 
   
       </Routes>
+      <SpeedInsights />
     </div>
     </div>
   )
