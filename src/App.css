@@ -4,7 +4,12 @@
 .app_main_page_content{
   height: calc(100% - 80px);
 }
-
+.loadind_div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
 
 

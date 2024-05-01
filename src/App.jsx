@@ -11,6 +11,7 @@ import NavBar from './component/navbar'
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from 'tsparticles'
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Circles } from 'react-loader-spinner';
 
 function App() {
 
@@ -135,10 +136,9 @@ else{
   return (
     <div className='APP'>
       <NavBar />
-      <Routes>
-      <Route path='/' element={<Home />} /> 
-      </Routes>
-      <SpeedInsights />
+      <div className='loadind_div'>
+      <Circles color='blue' visible={true} height={120} width={120} />
+      </div>
     </div>
   )
 }
