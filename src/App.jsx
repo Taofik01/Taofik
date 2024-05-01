@@ -135,7 +135,7 @@ else{
   return (
     <div className='APP'>
       <NavBar />
-      
+      <Route path='/' element={<Home />} /> 
     </div>
   )
 }
