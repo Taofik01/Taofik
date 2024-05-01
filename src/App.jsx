@@ -126,7 +126,7 @@ if (init) {
         <Route path='#' element={<Home />} /> 
   
       </Routes>
-      <SpeedInsights />
+      {/* <SpeedInsights /> */}
     </div>
     </div>
   )
@@ -135,7 +135,10 @@ else{
   return (
     <div className='APP'>
       <NavBar />
+      <Routes>
       <Route path='/' element={<Home />} /> 
+      </Routes>
+      <SpeedInsights />
     </div>
   )
 }
