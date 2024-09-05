@@ -24,7 +24,7 @@
     position: relative;
     text-transform: uppercase;
     padding: 5px 10px;
-    border-bottom:2px solid var(--theme-main-color) ;
+    border-bottom:2px solid var(--myColor) ;
 }
 .experience_headet_text::after, .experience_headet_text::before, .education_headet_text::after, .education_headet_text::before{
     position: absolute;

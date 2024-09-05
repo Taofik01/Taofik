@@ -12,14 +12,14 @@
     position: relative;
     text-transform: uppercase;
     padding:5px 10px ;
-    border-bottom: 2px solid var(--theme-main-color);
+    border-bottom: 2px solid var(--myColor);
 }
 .contact_header_text::before, .contact_header_text::after{
     position: absolute;
     content: "";
     width: 2px ;
     height: 5px;
-    background-color: var(--theme-main-color);
+    background-color: var(--myColor);
     bottom: -1px;
 }
 .contact_header_text::after{
@@ -94,13 +94,13 @@
     background: transparent;
     color: var(--theme-main-color);
     border:1.5px solid var(--theme-main-color) ;
-    border-radius:4px ;
+    border-radius:8px ;
     font-weight: 600;
 
 }
 .submit_button:hover{
-    background: var(--theme-main-color);
-    color: #000;
+    background: var(--myColor);
+    color: #ffffff;
 }
 
 @media only screen and (max-width: 768PX) {

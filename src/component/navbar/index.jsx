@@ -2,7 +2,7 @@ import "./styles.scss";
 import {  FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import TaofikLogo from "../../assets/taofik.svg";
+import TaofikLogo from "../../assets/taofik.png";
 
 const data = [
   {

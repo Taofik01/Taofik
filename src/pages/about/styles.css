@@ -57,34 +57,43 @@
    animation:  slideRight 2s linear ;
 }
 
+/* background: radial-gradient(180px, var(--theme-main-color), transparent 90%); */
+
 .profile_container_innercontent{
     width: 350px;
     height: 350px;
-    background: radial-gradient(180px, var(--theme-main-color), transparent 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:url(../../assets/work.png) ;
     position: relative;
     border-radius:50% ;
-    border: 1.5px solid var(--theme-main-color);  
+    border: 1.5px solid #f59400;  
     animation: rotation 10s linear 1s infinite ;
 
     div:nth-child(1){
         position: absolute;
         top: -9%;
         left: 41%;
+        color: #133a1b;
     }
     div:nth-child(2){
         position: absolute;
         right: -8%;
         top: 41.5%;
+        color: #133a1b;
     }
     div:nth-child(3){
         position: absolute;
         bottom: -10%;
         left: 41%;
+        color: #133a1b;
     }
     div:nth-child(4){
         position: absolute;
         left: -8%;
         top: 41%;
+        color: #133a1b;
     }
 }
 

@@ -20,7 +20,7 @@ export default function Resume() {
         <div className='timeline_experience'>
           <h3 className='experience_headet_text'>Experience</h3>
           <VerticalTimeline layout={'1-column'}
-          lineColor="var(--theme-main-color)">
+          lineColor="#f59400">
               {
                 data.experience.map((item, key) => (
                   <VerticalTimelineElement key={key}
@@ -34,8 +34,8 @@ export default function Resume() {
                    }}
                    icon={<MdWork />}
                    iconStyle={{
-                    background: '#181818',
-                    color: 'var(--theme-main-color)',
+                    background: 'var(--theme-main-color)',
+                    color: '#f59400',
                    }}
                   >
                       <div className='vertical-timeline-element-title-wrapper'>
@@ -56,7 +56,7 @@ export default function Resume() {
         <div className='timeline_education'>
           <h3 className='education_headet_text'>Education</h3>
           <VerticalTimeline layout={'1-column'}
-          lineColor="var(--theme-main-color)">
+          lineColor="var(--myColor)">
               {
                 data.education.map((item, key) => (
                   <VerticalTimelineElement key={key}
@@ -70,8 +70,8 @@ export default function Resume() {
                    }}
                    icon={<MdSchool />}
                    iconStyle={{
-                    background: '#181818',
-                    color: 'var(--theme-main-color)',
+                    background: 'var(--theme-main-color)',
+                    color: 'var(--myColor)',
                    }}
                   >
                       <div className='vertical-timeline-element-title-wrapper'>

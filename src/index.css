@@ -4,7 +4,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -12,10 +12,11 @@
   -moz-osx-font-smoothing: grayscale;
 
 
-    --theme-background-color : #242424;
-    --theme-main-color : blue; 
-    --theme-sub-text-color : #ffffff;
-    --theme-nav-background-color: #1d1d1d;
+    --theme-background-color : white;
+    --theme-main-color : #133a1b; 
+    --theme-sub-text-color : black;
+    --theme-nav-background-color: #133a1b;
+    --myColor: #f59400;
 
 }
 /* //ffdd40 */

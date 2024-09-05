@@ -7,9 +7,10 @@
       font-size: 1rem;
       position: sticky;
       z-index: 1000;
+      border-bottom: .7rem solid #f59400;
     }
     .navbar_image{
-        height: 35px;
+        height: 15rem;
     }
     .navbar_container{
       display: flex;
@@ -21,7 +22,7 @@
     }
     
     .navbar_container_logo{
-        color: var(--theme-main-color);
+        color: white;
         cursor: pointer;
     }
     
@@ -29,6 +30,7 @@
       display: flex;
       list-style: none;
       text-align: center;
+      
     }
     
     
@@ -49,10 +51,10 @@
     
          .navbar__container_menu_item:hover::after{
           width: 100%;
-          background: var(--theme-main-color);
+          background: white;
          }
          .navbar_container_menu_links{
-          color: var(--theme-main-color);
+          color: white;
           text-decoration: none;
           padding: 0.5rem;
          }

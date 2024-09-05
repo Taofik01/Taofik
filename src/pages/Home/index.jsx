@@ -25,12 +25,13 @@ const navigate = useNavigate();
         <h1 className='home_text'>
             Hello I'm Taofik
             <br />
-            Front end developer
+            Software Engineer
         </h1>
       </div>
-      <div className={`home_contact-me ${isVisible ? 'show' : ''}`}>
+      
+      <div  className={`home_contact-me ${isVisible ? 'show' : ''}`}>
         <button onClick={handleNavigateToContact} className='home_contact_button'>Hire Me</button>
-        {/* <button className='home_contact_button'>Download CV</button> */}
+        {/* <a href="" download="Taofik CV"><button className='home_contact_button'>Download CV</button> </a>*/}
       </div>
     </section>
   )

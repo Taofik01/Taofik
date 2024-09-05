@@ -17,7 +17,7 @@ export const skillsData = [
                 },
                 {
                     name : "COMMUNICATION",
-                    percentage: "70",
+                    percentage: "60",
                 },
             ],
         },
@@ -33,7 +33,7 @@ export const skillsData = [
             percentage: "65",
         },
         {
-            name : "SASS",
+            name : "SCSS",
             percentage: "55",
         },
         {
