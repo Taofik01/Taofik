@@ -77,7 +77,7 @@
         transition: all 0.5s ease;
         }
       .navbar_container_menu.active{
-          background: #181818;
+          background: var(--theme-nav-background-color);
           left: 0px;
           opacity: 1;
         }
@@ -91,7 +91,7 @@
       .nav-icon{
         display: block;
         cursor: pointer;
-        color: var(--theme-main-color);
+        color: var(--myColor);
         padding-right: 20px;
       }
     }
