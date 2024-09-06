@@ -33,7 +33,7 @@ export default function Contact() {
   return (
     <section>
       <PageHeaderContent
-        headerText="My Portfolio"
+        headerText="Contact Me"
         icon={<BsInfoCircleFill size={40} />}
       />
       <div className='contact_content'>
