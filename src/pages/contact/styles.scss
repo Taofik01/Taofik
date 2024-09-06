@@ -99,8 +99,8 @@
 
 }
 .submit_button:hover{
-    background: var(--myColor);
-    color: #ffffff;
+    background: var(--theme-main-color);
+    color: var(--myColor);
 }
 
 @media only screen and (max-width: 768PX) {
