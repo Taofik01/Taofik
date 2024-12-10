@@ -58,7 +58,7 @@ const navigate = useNavigate();
           <br />
           {/* Download button */}
           <a href={Taofik_CV} download="TaofikCV.pdf">
-            <button className='home_contact_button2' disabled>My Resume</button>
+            <button className='home_contact_button2' disabled>My Resume😂</button>
           </a>
         </div>
       )}

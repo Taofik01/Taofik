@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import PageHeaderContent from "../../component/pageHeader";
 import Image1 from "../../assets/Image1.png";
 import Image2 from "../../assets/Image2.png";
@@ -10,6 +10,7 @@ import Image7 from "../../assets/Image7.png";
 import Image8 from "../../assets/Image8.png";
 import Image9 from '../../assets/Image9.png';
 import Image10 from "../../assets/Image10.png";
+import Image11 from "../../assets/Image11.png";
 import "./styles.scss";
 import { Link } from "react-router-dom";
 
@@ -17,11 +18,23 @@ import { BsInfoCircleFill } from "react-icons/bs";
 
 const PortfolioData = [
   {
+    id: 5,
+    name: 'Movie Library',
+    Image: Image11,
+    link: "https://movie-library-bloocode.vercel.app/",
+  },
+  {
     id: 3,
     name: "Flatshare",
     Image: Image10,
     link: "https://www.flatshare.ng",
   },
+  {
+    id: 4,
+    name: "SKYQ website",
+    Image: Image9,
+    link: "https://www.skyqent.com/",
+  }, 
   {
     id: 3,
     name: "Food Recipe",
@@ -70,12 +83,7 @@ const PortfolioData = [
     Image: Image8,
     link: "https://note-app-ten-puce.vercel.app/",
   },
-  {
-    id: 4,
-    name: "SKYQ website",
-    Image: Image9,
-    link: "https://www.skyqent.com/",
-  },  
+  
 ];
 
 const filterData = [
@@ -95,6 +103,10 @@ const filterData = [
     filterId: 4,
     label: "Vue.js",
   },
+  {
+    filterId: 5,
+    label: "Next.js"
+  }
 ];
 
 export default function Portfolio() {
