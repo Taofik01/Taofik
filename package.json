@@ -14,8 +14,7 @@
     "@tsparticles/react": "^3.0.0",
     "@vercel/speed-insights": "^1.0.10",
     "dotenv": "^16.4.5",
-    "firebase": "^10.11.1",
-    "particles": "^0.1.4",
+    "firebase": "^12.12.0",
     "rc-progress": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -23,11 +22,8 @@
     "react-loader-spinner": "^6.1.6",
     "react-router-dom": "^6.22.3",
     "react-simple-animate": "^3.5.2",
-    "react-tsparticles": "^2.12.2",
     "react-vertical-timeline-component": "^3.6.0",
-    "sass": "^1.75.0",
-    "tsparticles": "^3.3.0",
-    "tsparticles-slim": "^2.12.0"
+    "sass": "^1.75.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
@@ -37,6 +33,6 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
-    "vite": "^8.0.8"
+    "vite": "^7.3.2"
   }
 }
