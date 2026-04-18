@@ -91,7 +91,7 @@ export default function Contact() {
                     </h2>
 
                     <p className='contact__subtext'>
-                        Open to remote roles, freelance projects and
+                        Open to remote roles, Hybrid roles, freelance projects and
                         interesting collaborations. Response within 24 hours.
                     </p>
 
