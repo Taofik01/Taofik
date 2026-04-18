@@ -1,69 +1,98 @@
-import {  useState } from 'react'
-import React from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './styles.scss';   
-import { animateUseEffect } from '../../utils.js/animateUseEffect';
-
-
+import Taofik from '../../assets/taofik.jpg';
+import './styles.scss';
 
 export default function Home() {
-    const [isVisible, setIsVisible] = useState(false);
-    const [showPreview, setShowPreview] = useState(false);
-    const Taofik_CV = '/TaofikCV.pdf';
+    const [loaded, setLoaded] = useState(false);
+    const navigate = useNavigate();
 
-    
+    useEffect(() => {
+        const timer = setTimeout(() => setLoaded(true), 80);
+        return () => clearTimeout(timer);
+    }, []);
 
-const navigate = useNavigate();
+    return (
+        <section id='home' className={`home ${loaded ? 'home--loaded' : ''}`}>
+            <div className="home__grid">
 
-   const  handleNavigateToContact = () => {
-    navigate('/contact')
-   }
+                {/* LEFT */}
+                <div className="home__left">
+                    <div className="home__available">
+                        <span className="home__dot" />
+                        Available for remote work
+                    </div>
 
-   const handleClick = () => {
-    setShowPreview(true);
-  };
+                    <h1 className="home__name">
+                        <span className="home__name-first">TAOFIK</span>
+                        <span className="home__name-last">SULAIMON</span>
+                    </h1>
 
- animateUseEffect();
+                    <div className="home__role-row">
+                        <span className="home__rule" />
+                        <span className="home__role">Software Engineer</span>
+                    </div>
 
-  return (
-    <section id='home' className='home'>
-      <div className='home_text-wrapper'>
-        <h1 className='home_text'>
-            Hello I'm Taofik
-            <br />
-            Software Engineer
-        </h1>
-      </div>
-      
-      <div  className={`home_contact-me ${isVisible ? 'show' : ''}`}>
-        <button onClick={handleNavigateToContact} className='home_contact_button'>Hire Me</button>
+                    <p className="home__stack">React · Next.js · TypeScript · Node.js</p>
 
+                    <p className="home__tagline">
+                        4+ years shipping fintech systems,<br />
+                        dashboards &amp; production-grade platforms.
+                    </p>
 
-        {/* Initial button to show preview */}
-      {!showPreview && (
-        <button className='home_contact_button1' onClick={handleClick}>
-          Preview Resume
-        </button>
-      )}
+                    <div className="home__buttons">
+                        <button
+                            className="home__btn home__btn--primary"
+                            onClick={() => navigate('/contact')}
+                        >
+                            Hire Me
+                        </button>
+                        <a
+                            href="/TaofikCV.pdf"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="home__btn home__btn--secondary"
+                        >
+                            View Resume
+                        </a>
+                    </div>
+                </div>
 
-      {/* Show preview and download button after preview is clicked */}
-      {showPreview && (
-        <div>
-          {/* PDF preview */}
-          <iframe 
-            src={Taofik_CV} 
-            style={{ width: '100%', height: '400px', marginTop: '20px' }} 
-            title="CV Preview"
-          ></iframe>
-          <br />
-          {/* Download button */}
-          <a href={Taofik_CV} download="TaofikCV.pdf">
-            <button className='home_contact_button2' disabled>My Resume😂</button>
-          </a>
-        </div>
-      )}
-        {/* <a href={Taofik_CV} download="TaofikCV.pdf"><button className='home_contact_button'>My Resume</button> </a> */}
-      </div>
-    </section>
-  )
+                {/* RIGHT */}
+                <div className="home__right">
+                    <div className="home__frame">
+                        <div className="home__photo-wrap">
+                            {/* ← replace with your actual photo */}
+                            <img
+                                src={Taofik}
+                                alt="Taofik Sulaimon"
+                                className="home__photo"
+                                onError={e => (e.currentTarget.style.display = 'none')}
+                            />
+                            {/* fallback initials shown when no image */}
+                            {/* <div className="home__initials" aria-hidden="true">TS</div> */}
+                        </div>
+                        <div className="home__frame-accent" />
+                    </div>
+
+                    <div className="home__stats">
+                        <div className="home__stat">
+                            <span className="home__stat-n">4+</span>
+                            <span className="home__stat-l">Years exp.</span>
+                        </div>
+                        <div className="home__stat-divider" />
+                        <div className="home__stat">
+                            <span className="home__stat-n">10+</span>
+                            <span className="home__stat-l">Projects shipped</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="home__scroll">
+                <span className="home__scroll-label">scroll</span>
+                <span className="home__scroll-line" />
+            </div>
+        </section>
+    );
 }

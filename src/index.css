@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Syne', system-ui, sans-serif;
   font-weight: 400;
 
   color-scheme: light dark;
@@ -15,8 +15,9 @@
     --theme-background-color : white;
     --theme-main-color : #133a1b; 
     --theme-sub-text-color : black;
-    --theme-nav-background-color: #133a1b;
-    --myColor: #f59400;
+    --theme-nav-background-color: #0A0A08;
+    --myColor: #E8A020;
+    --accent: #E8A020;
 
 }
 /* //ffdd40 */

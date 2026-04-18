@@ -1,96 +1,115 @@
-import React from 'react'
-import PageHeaderContent from '../../component/pageHeader'
-import { BsInfoCircleFill } from 'react-icons/bs'
-import { VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline-component"
-import "react-vertical-timeline-component/style.min.css";
+import React, { useEffect } from 'react';
+import PageHeaderContent from '../../component/pageHeader';
+import { BsInfoCircleFill } from 'react-icons/bs';
 import { data } from './utils';
-import './styles.css';
-import { MdWork } from 'react-icons/md'
-import { MdSchool } from 'react-icons/md'
-export default function Resume() {
-  return (
-    <div>
-      <section id='about' className='resume'>
-        <PageHeaderContent
-         headerText = "About Me"
-         icon={ <BsInfoCircleFill size={40}/>}
-        />
+import './styles.scss';
 
-        <div className="timeline">
-        <div className='timeline_experience'>
-          <h3 className='experience_headet_text'>Experience</h3>
-          <VerticalTimeline layout={'1-column'}
-          lineColor="#f59400">
-              {
-                data.experience.map((item, key) => (
-                  <VerticalTimelineElement key={key}
-                  className='timeline_experience_vertical'
-                   contentStyle={{
-                    background: 'none',
-                    color: 'var(--theme-sub-text-color)',
-                    border: '1.5px solid var(--theme-main-color)',
-                    borderRadius: '10px',
-                    boxShadow: '0px 0px 10px 0px var(--theme-main-color)',
-                   }}
-                   icon={<MdWork />}
-                   iconStyle={{
-                    background: 'var(--theme-main-color)',
-                    color: '#f59400',
-                   }}
-                  >
-                      <div className='vertical-timeline-element-title-wrapper'>
-                        <h3 className='vertical-timeline-element-title'>
-                          {item.title}
-                        </h3>
-                        <h4 vertical-timeline-element-subtitle>
-                          {item.subTitle}
-                        </h4>
-                      
-                      </div>
-                      <p  className='description'>{item.description}</p>
-                  </VerticalTimelineElement>
-                ))
-              }
-          </VerticalTimeline>
-        </div>
-        <div className='timeline_education'>
-          <h3 className='education_headet_text'>Education</h3>
-          <VerticalTimeline layout={'1-column'}
-          lineColor="var(--myColor)">
-              {
-                data.education.map((item, key) => (
-                  <VerticalTimelineElement key={key}
-                  className='timeline_experience_vertical'
-                  contentStyle={{
-                    background: 'none',
-                    color: 'var(--theme-sub-text-color)',
-                    border: '1.5px solid var(--theme-main-color)',
-                    borderRadius: '10px',
-                    boxShadow: '0px 0px 10px 0px var(--theme-main-color)',
-                   }}
-                   icon={<MdSchool />}
-                   iconStyle={{
-                    background: 'var(--theme-main-color)',
-                    color: 'var(--myColor)',
-                   }}
-                  >
-                      <div className='vertical-timeline-element-title-wrapper'>
-                        <h3 className='vertical-timeline-element-title'>
-                          {item.title}
-                        </h3> 
-                        <h4 vertical-timeline-element-subtitle>
-                          {item.subTitle}
-                        </h4>
-                       
-                      </div>
-                      <p className='description'>{item.description}</p>
-                  </VerticalTimelineElement>
-                ))
-              }
-          </VerticalTimeline>
-        </div>
-        </div>
-      </section>
-    </div>
-  )
+export default function Resume() {
+
+    useEffect(() => {
+        const els = document.querySelectorAll('.resume__animate');
+        const observer = new IntersectionObserver(
+            entries => entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('resume__animate--visible');
+            }),
+            { threshold: 0.1 }
+        );
+        els.forEach(el => observer.observe(el));
+        return () => observer.disconnect();
+    }, []);
+
+    return (
+        <section id='resume' className='resume'>
+            <PageHeaderContent
+                headerText="Resume"
+                icon={<BsInfoCircleFill size={40} />}
+            />
+
+            <div className='resume__body'>
+
+                {/* ── Experience ── */}
+                <div className='resume__col'>
+                    <div className='resume__col-header resume__animate'>
+                        <span className='resume__label'>WORK HISTORY</span>
+                        <h2 className='resume__col-title'>Experience</h2>
+                    </div>
+
+                    <div className='resume__timeline'>
+                        {data.experience.map((item, i) => (
+                            <div
+                                key={i}
+                                className='resume__item resume__animate'
+                                style={{ transitionDelay: `${i * 0.08}s` }}
+                            >
+                                <div className='resume__item-dot' />
+                                <div className='resume__item-content'>
+                                    <div className='resume__item-top'>
+                                        <div>
+                                            <h3 className='resume__item-title'>{item.title}</h3>
+                                            <p className='resume__item-company'>{item.company}</p>
+                                        </div>
+                                        <div className='resume__item-meta'>
+                                            <span className='resume__item-period'>{item.period}</span>
+                                            <span className='resume__item-location'>{item.location}</span>
+                                        </div>
+                                    </div>
+                                    <ul className='resume__item-bullets'>
+                                        {item.bullets.map((b, j) => (
+                                            <li key={j}>{b}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* ── Education ── */}
+                <div className='resume__col'>
+                    <div className='resume__col-header resume__animate'>
+                        <span className='resume__label'>ACADEMIC</span>
+                        <h2 className='resume__col-title'>Education</h2>
+                    </div>
+
+                    <div className='resume__timeline'>
+                        {data.education.map((item, i) => (
+                            <div
+                                key={i}
+                                className='resume__item resume__animate'
+                                style={{ transitionDelay: `${i * 0.1}s` }}
+                            >
+                                <div className='resume__item-dot' />
+                                <div className='resume__item-content'>
+                                    <div className='resume__item-top'>
+                                        <div>
+                                            <h3 className='resume__item-title'>{item.title}</h3>
+                                            <p className='resume__item-company'>{item.institution}</p>
+                                            {item.note && (
+                                                <span className='resume__item-note'>{item.note}</span>
+                                            )}
+                                        </div>
+                                        <span className='resume__item-period'>{item.period}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* ── Download CTA ── */}
+                    <div className='resume__cta resume__animate'>
+                        <p className='resume__cta-text'>Want the full picture?</p>
+                        <a
+                            href='/TaofikCV.pdf'
+                            target='_blank'
+                            rel='noreferrer'
+                            className='resume__cta-btn'
+                        >
+                            Download Full CV ↗
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    );
 }
